@@ -101,7 +101,7 @@ After checking out the repo, run `bin/setup` to install dependencies. Then, run 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/yourusername/ruby-flow.
+Bug reports and pull requests are welcome on GitHub at https://github.com/notthatjen/ruby-flow.
 
 ## License
 

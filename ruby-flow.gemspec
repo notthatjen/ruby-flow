@@ -1,8 +1,8 @@
 Gem::Specification.new do |spec|
   spec.name          = "ruby-flow"
   spec.version       = "0.1.0"
-  spec.authors       = ["Your Name"]
-  spec.email         = ["your.email@example.com"]
+  spec.authors       = ["Jen Villaganas"]
+  spec.email         = ["me@jen.ph"]
 
   spec.summary       = "A Ruby library for creating interactive node-based UIs"
   spec.description   = "RubyFlow is a highly customizable library for building node-based editors, workflows and interactive diagrams, inspired by React Flow"

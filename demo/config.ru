@@ -1,4 +1,2 @@
-require 'bundler/setup'
-require './app'
-
-run Sinatra::Application 
+require_relative 'app'
+run RubyFlowApp 

@@ -22,4 +22,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "sinatra", "~> 3.0"
   spec.add_development_dependency "sinatra-contrib", "~> 3.0"
   spec.add_development_dependency "puma", "~> 6.0"
+  spec.add_development_dependency "pry", "~> 0.15"
 end 

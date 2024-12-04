@@ -1,5 +1,8 @@
-# RubyFlow
+<p align="center">
+  <img src="https://raw.githubusercontent.com/notthatjen/ruby-flow/main/demo/public/images/ruby-flow-icon.svg" width="128" height="128" alt="Ruby Flow Logo">
+</p>
 
+# RubyFlow
 RubyFlow is a Ruby library for building node-based editors, workflows, and interactive diagrams. It's inspired by [React Flow](https://reactflow.dev/) and provides similar functionality for Ruby applications.
 
 ## Installation

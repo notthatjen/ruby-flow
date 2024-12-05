@@ -35,28 +35,36 @@ require 'ruby_flow'
 # Create a new graph
 graph = RubyFlow::Graph.new
 
-# Create nodes
+# Create nodes with handles
 node1 = RubyFlow::Node.new(
   id: '1',
   position: { x: 100, y: 100 },
   data: { label: 'Node 1' }
 )
+# Add source handles to node1
+node1.add_source_handle(id: 'n1-right', position: 'right')
+node1.add_source_handle(id: 'n1-bottom', position: 'bottom')
 
 node2 = RubyFlow::Node.new(
   id: '2',
   position: { x: 300, y: 100 },
   data: { label: 'Node 2' }
 )
+# Add target handles to node2
+node2.add_target_handle(id: 'n2-left', position: 'left')
+node2.add_target_handle(id: 'n2-top', position: 'top')
 
 # Add nodes to the graph
 graph.add_node(node1)
 graph.add_node(node2)
 
-# Create an edge between nodes
+# Create an edge between specific handles
 edge = RubyFlow::Edge.new(
   id: 'e1-2',
   source: '1',
-  target: '2'
+  target: '2',
+  source_handle: 'n1-right',
+  target_handle: 'n2-left'
 )
 
 # Add edge to the graph
@@ -86,21 +94,45 @@ $ bundle exec rackup
 
 4. Open your browser and visit `http://localhost:9292`
 
-The demo shows a simple graph visualization using React Flow's web components.
+The demo shows an interactive graph visualization with draggable nodes and connection handles.
 
 ## Features
 
 - Create and manage nodes with customizable properties
 - Connect nodes with edges
-- Support for source and target handles
+- Advanced handle system:
+  - Multiple handles per node side (automatically distributed)
+  - Source and target handle types
+  - Support for all positions (top, right, bottom, left)
+  - Visual feedback on hover
+- Interactive UI:
+  - Draggable nodes
+  - Infinite panning canvas
+  - Zoom controls
+  - Dotted grid background
 - Flexible node and edge styling
 - Graph management and traversal
 - Easy integration with web frameworks (Rails/Sinatra)
-- Visual representation using React Flow
+- Development mode with auto-reloading (Sinatra)
 
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests.
+
+For development with auto-reloading in the demo app:
+
+1. Make sure you have the required dependencies:
+
+```bash
+$ bundle add sinatra-contrib
+```
+
+2. The demo app is configured to auto-reload changes in:
+   - `demo/app.rb`
+   - Files in `lib/**/*.rb`
+   - Files in `demo/helpers/**/*.rb`
+
+3. Just refresh your browser to see code changes without restarting the server
 
 ## Contributing
 

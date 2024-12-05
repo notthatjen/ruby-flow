@@ -47,8 +47,8 @@ RSpec.describe RubyFlow::Node do
         data: data,
         type: "default",
         style: {},
-        sourceHandles: [],
-        targetHandles: []
+        source_handles: [],
+        target_handles: []
       )
     end
   end

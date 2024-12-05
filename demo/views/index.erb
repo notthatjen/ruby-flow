@@ -9,10 +9,16 @@
       font-family: sans-serif;
       overflow: hidden;
     }
-    #flow-container {
+    #flow-root {
       width: 100vw;
       height: 100vh;
+      position: relative;
       background-color: #f8f9fa;
+    }
+    #flow-container {
+      width: 100%;
+      height: 100%;
+      display: block;
     }
     .node {
       fill: white;
@@ -30,6 +36,29 @@
       stroke: #555;
       stroke-width: 2px;
       marker-end: url(#arrowhead);
+    }
+    .handle {
+      fill: white;
+      stroke: #555;
+      stroke-width: 2px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .source-handle {
+      fill: #f8f9fa;
+    }
+    .target-handle {
+      fill: #f8f9fa;
+    }
+    .source-handle:hover {
+      fill: #e6f3ff;
+      stroke: #0066cc;
+      r: 5;
+    }
+    .target-handle:hover {
+      fill: #fff3e6;
+      stroke: #cc6600;
+      r: 5;
     }
     .controls {
       position: absolute;

@@ -88,7 +88,7 @@ DEPENDENCIES
   rubocop (~> 1.21)
   ruby-flow!
   sinatra (~> 3.0)
-  sinatra-contrib (~> 3.0)
+  sinatra-contrib (~> 3.2)
 
 BUNDLED WITH
    2.4.1

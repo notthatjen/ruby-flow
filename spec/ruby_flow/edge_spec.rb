@@ -37,8 +37,8 @@ RSpec.describe RubyFlow::Edge do
         id: edge_id,
         source: source,
         target: target,
-        sourceHandle: source_handle,
-        targetHandle: target_handle,
+        source_handle: source_handle,
+        target_handle: target_handle,
         type: "default",
         style: {},
         data: data

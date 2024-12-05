@@ -1,0 +1,60 @@
+{
+  "plugins": [
+    "git-tag",
+    "conventional-commits",
+    "first-time-contributor",
+    "released",
+    [
+      "gem",
+      {
+        "gemName": "ruby-flow",
+        "gemSpecPath": "ruby-flow.gemspec"
+      }
+    ]
+  ],
+  "owner": "notthatjen",
+  "repo": "ruby-flow",
+  "labels": [
+    {
+      "name": "major",
+      "changelogTitle": "💥 Breaking Change",
+      "description": "Introduces a breaking change.",
+      "releaseType": "major",
+      "color": "FF0000"
+    },
+    {
+      "name": "minor",
+      "changelogTitle": "🚀 Enhancement",
+      "description": "Adds a new feature or enhancement.",
+      "releaseType": "minor",
+      "color": "00FF00"
+    },
+    {
+      "name": "patch",
+      "changelogTitle": "🐛 Bug Fix",
+      "description": "Fixes a bug.",
+      "releaseType": "patch",
+      "color": "0000FF"
+    },
+    {
+      "name": "skip-release",
+      "description": "Skip this PR in the next release",
+      "releaseType": "skip",
+      "color": "CCCCCC"
+    },
+    {
+      "name": "internal",
+      "changelogTitle": "🏠 Internal",
+      "description": "Internal changes only",
+      "releaseType": "none",
+      "color": "CCCCCC"
+    },
+    {
+      "name": "documentation",
+      "changelogTitle": "📝 Documentation",
+      "description": "Documentation only changes",
+      "releaseType": "none",
+      "color": "CCCCCC"
+    }
+  ]
+} 

@@ -138,6 +138,35 @@ $ bundle add sinatra-contrib
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/notthatjen/ruby-flow.
 
+This project uses [Auto-it](https://github.com/intuit/auto) to automate releases and manage contributions. When creating pull requests, please:
+
+1. Use [Conventional Commits](https://www.conventionalcommits.org/) format for your commit messages
+2. Your PR will be automatically labeled based on the commit type:
+   - `fix:` for bug fixes (patch release)
+   - `feat:` for new features (minor release)
+   - `feat!:` or `fix!:` for breaking changes (major release)
+   - `docs:` for documentation changes
+   - `chore:` for maintenance tasks
+
+3. The release process will automatically:
+   - Update the CHANGELOG
+   - Create a new release
+   - Publish to RubyGems
+   - Create GitHub releases
+
+### Development Process
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes using conventional commits:
+   ```bash
+   git commit -m "feat: add amazing feature"
+   # or
+   git commit -m "fix: resolve issue with X"
+   ```
+4. Push to your branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
 ## License
 
 The gem is available as open source under the terms of the MIT License. 
